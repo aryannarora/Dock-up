@@ -13,7 +13,7 @@
     "@octokit/rest": "^15.2.2",
     "babel": "^6.23.0",
     "node-fetch": "^2.1.1",
-    "probot": "^5.0.0"
+    "probot": "^5.0.1"
   },
   "devDependencies": {
     "jest": "^21.2.1",
