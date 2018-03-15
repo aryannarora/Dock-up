@@ -7,7 +7,7 @@ const createIssue = require("./lib/create-issue.js")
 
 module.exports = (robot) => {
 
-  robot.on('pull_request', async context => {
+  robot.on('pull_request.closed', async context => {
     
     const owner = context.payload.repository.owner.login
     const repo = context.payload.repository.name
