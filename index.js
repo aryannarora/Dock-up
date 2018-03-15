@@ -35,7 +35,8 @@ module.exports = (robot) => {
               body: content.join(', ') + '; not found in Documentation!',
               repo: repo,
               title: 'DOCUMENTATION NOT UP TO DATE',
-              assignee: assignee
+              assignee: assignee,
+              labels: ['help wanted']
             }
             context.github.issues.create(issueSummary)
           }
