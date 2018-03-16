@@ -3,7 +3,6 @@ const getCommitMessages = require("./lib/get-pr-commits.js")
 const getReadme = require("./lib/get-readme.js")
 
 module.exports = (robot) => {
-
   robot.on('pull_request.closed', async context => {
 
     if (context.payload.pull_request.merged_at != null)
@@ -23,13 +22,12 @@ module.exports = (robot) => {
           //robot.log(readme.toUpperCase())
           let content = []
 
-           messages.forEach(function (item, index, array){
-
-           if (!readme.toUpperCase().includes(item.toUpperCase())){
+          messages.forEach(function (item, index, array){
+            if (!readme.toUpperCase().includes(item.toUpperCase())){
             content.push(item)
           }
         })
-           if (content.length) {
+          if (content.length) {
             const issueSummary = {
               owner: owner,
               body: content.join(', ') + '; not found in Documentation!',
@@ -40,7 +38,7 @@ module.exports = (robot) => {
             }
             context.github.issues.create(issueSummary)
           }
-      })
+        })
       }
     }
   })
