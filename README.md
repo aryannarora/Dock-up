@@ -1,4 +1,4 @@
-# dockup
+# Dock-up
 
 > a GitHub App that enforces documentation update if PR causes Breaking Change or adds a new feature.
 
@@ -12,14 +12,34 @@ If not found, an issue is generated with Title `[non detected features/ Breaking
 # EXAMPLE
 ![err](https://user-images.githubusercontent.com/30005173/37494788-66f02668-28d0-11e8-93cd-6b4ccc2d68c0.PNG)
 
+# Installation 
+https://github.com/apps/dock-up
+
 ## Setup
 
-```
-# Install dependencies
-npm install
+> Clone this repo.
 
-# Run the bot
-npm start
-```
+> Create your own github app. Follow https://github.com/settings/apps
+
+> Go to smee.io to generate a random url to receive webhooks.
+
+> Set the webhook url in your github app settings to that randomly generated url.
+
+> Set the webhook secret to anything.
+
+> Generate a private key for your app and save it in root folder of the cloned repo.
+
+> create an .env file and set following variables.
+
+  ```
+  WEBHOOK_SECRET = secret_you_set_above
+  
+  WEBHOOK_PROXY_URL = url_you_randomly_generated
+  
+  APP_ID = your_github_app_id
+  ```
+> npm start
+
+
 
 
