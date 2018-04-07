@@ -21,7 +21,7 @@ https://github.com/apps/dock-up
 
 > Create your own github app. Follow https://github.com/settings/apps
 
-> Go to smee.io to generate a random url to receive webhooks.
+> Go to https://smee.io to generate a random url to receive webhooks.
 
 > Set the webhook url in your github app settings to that randomly generated url.
 
